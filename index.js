@@ -18,10 +18,7 @@ module.exports = () => {
       <g
         width=${c.props.width}
       >
-        ${c.props.el({
-          height: c.props.height,
-          width: c.props.width
-        })}
+        ${c.props.el({ height: c.props.height, width: c.props.width })}
         <rect
           x=${c.props.width - width}
           y=0
@@ -64,10 +61,7 @@ module.exports = () => {
       c.props.width
     if (c.state.width === prev.width) return
     c._element.setAttribute('width', c.state.width)
-    c._element.children[c._element.children.length - 1].setAttribute(
-      'x',
-      c.state.width - width
-    )
+    c._element.lastElementChild.setAttribute('x', c.state.width - width)
     c.props.el({
       height: c.props.height,
       width: c.state.width
