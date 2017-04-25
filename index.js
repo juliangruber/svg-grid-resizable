@@ -24,7 +24,7 @@ module.exports = () => {
           y=0
           width=${width}
           height=${c.props.height}
-          fill=green
+          fill=transparent
           onmousedown=${dragstart}
           style="cursor:e-resize"
         />
