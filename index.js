@@ -32,6 +32,7 @@ module.exports = () => {
     `
   })
   const dragstart = ev => {
+    ev.stopPropagation()
     c.state.offsetX = ev.offsetX
     c._element.removeAttribute('onmousedown')
     window.addEventListener('mouseup', dragend)
