@@ -61,6 +61,7 @@ module.exports = () => {
     c.state.width = Math.round(offsetX / c.props.cellWidth) *
       c.props.cellWidth +
       c.props.width
+    c.state.width = Math.max(c.state.width, c.props.cellWidth)
     if (c.state.width === prev.width) return
     c._element.setAttribute('width', c.state.width)
     c._element.lastElementChild.setAttribute('x', c.state.width - width)
