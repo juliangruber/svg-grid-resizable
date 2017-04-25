@@ -18,7 +18,10 @@ module.exports = () => {
       <g
         width=${c.props.width}
       >
-        ${c.props.el(c.props.height, c.props.width)}
+        ${c.props.el({
+          height: c.props.height,
+          width: c.props.width
+        })}
         <rect
           x=${c.props.width - width}
           y=0
