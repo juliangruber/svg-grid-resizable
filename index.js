@@ -65,7 +65,10 @@ module.exports = () => {
       'x',
       c.state.width - width
     )
-    c.props.el(c.props.height, c.state.width)
+    c.props.el({
+      height: c.props.height,
+      width: c.state.width
+    })
   }
   return c
 }

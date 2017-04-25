@@ -12,7 +12,7 @@ const grid = new Grid()
 const cellHeight = 10
 const cellWidth = 20
 
-const onresize = (height, width) => console.log(height, width)
+const onresize = ({ height, width }) => console.log(height, width)
 
 const el = html`
   <svg width=400 height=200>
