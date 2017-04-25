@@ -32,7 +32,7 @@ const el = html`
       height: cellHeight,
       width: cellWidth,
       onresize,
-      el: (height, width) => note.render({
+      el: ({ height, width }) => note.render({
         height,
         width,
         velocity: 1

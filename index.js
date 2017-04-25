@@ -45,7 +45,10 @@ module.exports = () => {
         width: c.state.width
       })
     )
-    c.props.onresize(c.props.height, c.props.width)
+    c.props.onresize({
+      height: c.props.height,
+      width: c.props.width
+    })
   }
   const dragmove = ev => {
     const prev = {
