@@ -54,9 +54,8 @@ module.exports = () => {
     const prev = {
       width: c.state.width
     }
-    c.state.width = Math.round(
-      (ev.offsetX - c.state.offsetX) / c.props.cellWidth
-    ) *
+    const offsetX = ev.offsetX - c.state.offsetX
+    c.state.width = Math.round(offsetX / c.props.cellWidth) *
       c.props.cellWidth +
       c.props.width
     if (c.state.width === prev.width) return
