@@ -26,6 +26,7 @@ module.exports = () => {
           height=${c.props.height}
           fill=green
           onmousedown=${dragstart}
+          style="cursor:e-resize"
         />
       </g>
     `
@@ -35,10 +36,12 @@ module.exports = () => {
     c._element.removeAttribute('onmousedown')
     window.addEventListener('mouseup', dragend)
     window.addEventListener('mousemove', dragmove)
+    document.body.style.cursor = 'e-resize'
   }
   const dragend = () => {
     window.removeEventListener('mouseup', dragend)
     window.removeEventListener('mousemove', dragmove)
+    document.body.style.cursor = 'default'
     c.emit(
       'render',
       Object.assign(c.props, {
