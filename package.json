@@ -5,7 +5,7 @@
   "description": "Make an svg element resizable inside the confines of a fixed grid",
   "dependencies": {
     "bel": "^4.6.0",
-    "microcomponent": "^3.1.0"
+    "microcomponent": "^3.1.1"
   },
   "devDependencies": {
     "beefy": "^2.1.8",

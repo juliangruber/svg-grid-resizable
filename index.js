@@ -43,15 +43,9 @@ module.exports = () => {
     window.removeEventListener('mouseup', dragend)
     window.removeEventListener('mousemove', dragmove)
     document.body.style.cursor = 'default'
-    c.emit(
-      'render',
-      Object.assign(c.props, {
-        width: c.state.width
-      })
-    )
     c.props.onresize({
-      height: c.props.height,
-      width: c.props.width
+      height: c.state.height || c.props.height,
+      width: c.state.width
     })
   }
   const dragmove = ev => {
