@@ -19,5 +19,5 @@
     "example": "beefy example.js",
     "test": "prettier-standard-formatter *.js && standard"
   },
-  "version": "2.1.3"
+  "version": "3.0.0"
 }
